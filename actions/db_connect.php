@@ -5,7 +5,7 @@
     $localhost = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "restaurant";
+    $dbname = "cflms-marinbalabanov-codereview-10";
 
     $connect = mysqli_connect($localhost, $username, $password, $dbname);
 

@@ -65,17 +65,20 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
-        <title>Big Library</title>
+        <title>Big Media Library</title>
     </head>
     <body class="bg-light">
 
     <?php include('navbar.php'); ?>
-    <img src="assets/header.jpg" alt="Big Media Library" class="img-fluid shadow">
+    <div class="d-flex justify-content-center">
+        <img src="assets/header.jpg" alt="Big Media Library" class="img-fluid shadow rounded-lg mt-4">
+    </div>
+
     <div class="container my-5">
         <div class="row my-3">
             <div class="col-12 text-center">
                 <h2>Welcome to the Big Media Library</h2>
-                <h4>Please register and login to proceed.<br>For test purposes please use username <strong>test1@test.com</strong> and password <strong>tatata</strong>.</h4>
+                <h4>Please register and login to proceed.<br>For test purposes please use username <strong>test1@test.com</strong> and password <strong>tatata</strong></h4>
             </div>
         </div>
             <div class="col-6 offset-3 mb-5 alert alert-primary pb-4 rounded-lg">

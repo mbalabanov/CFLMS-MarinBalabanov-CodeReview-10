@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-4">
-    <img src="assets/big-library.svg" width="50" height="50" alt="Big Library" loading="lazy">
-    <a class="navbar-brand h1" href="index.php">Big Library</a>
+    <img src="assets/big-library.svg" width="50" height="50" alt="Big Library" class="mr-2" loading="lazy">
+    <a class="navbar-brand h1" href="index.php">Big Media Library</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
