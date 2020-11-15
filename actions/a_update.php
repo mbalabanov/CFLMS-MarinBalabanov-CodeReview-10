@@ -31,19 +31,25 @@
                         require_once 'db_connect.php';
 
                         if ($_POST) {
-                            $name = $_POST['formname'];
+                            $title = $_POST['formtitle'];
                             $image = $_POST['formimage'];
-                            $ingredients = $_POST[ 'formingredients'];
-                            $allergens = $_POST[ 'formallergens'];
-                            $price = intval($_POST[ 'formprice']);
+                            $author_first_name = $_POST['formauthor_first_name'];
+                            $author_last_name = $_POST['formauthor_last_name'];
+                            $isbn_code = $_POST[ 'formisbn_code'];
+                            $short_description = $_POST[ 'formshort_description'];
+                            $publish_date = intval($_POST[ 'formpublish_date']);
+                            $publisher_name = $_POST[ 'formpublisher_name'];
+                            $publisher_address = $_POST[ 'formpublisher_address'];
+                            $publisher_size = $_POST[ 'formpublisher_size'];
+                            $media_type = $_POST[ 'formmedia_type'];
 
-                            $id = $_POST['formid'];
+                            $media_id = $_POST['formmedia_id'];
 
-                            $sql = "UPDATE meals SET name = '$name', image = '$image', price = '$price', ingredients = '$ingredients', allergens = '$allergens' WHERE meal_id = {$id}" ;
+                            $sql = "UPDATE media SET title = '$title', image = '$image', author = '$author', isbn_code = '$isbn_code', short_description = '$short_description', publish_date = '$publish_date', publisher = '$publisher', media_type = '$media_type' WHERE media_id = {$media_id}" ;
                             if($connect->query($sql) === TRUE) {
-                                echo "<h3>Meal '$name' was successfully updated</h3><a class='btn btn-primary m-2' href='../update.php?id=" .$id."'>Edit meal</a><a class='btn btn-secondary m-2' href='../index.php'>Back to home</a>";
+                                echo "<h3>Media '$title' was successfully updated</h3><a class='btn btn-primary m-2' href='../update.php?id=" .$media_id."'>Edit media</a><a class='btn btn-secondary m-2' href='../index.php'>Back to home</a>";
                             } else {
-                                    echo "Error while updating record : ". $connect->error;
+                                echo "Error while updating record : ". $connect->error;
                             }
 
                             $connect->close();

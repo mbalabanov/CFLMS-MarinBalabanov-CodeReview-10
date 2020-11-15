@@ -49,24 +49,26 @@
                 if($result->num_rows > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
                         printf('
-                            <div class="col-md-4 pt-4">
-                                <div class="bg-white border p-2 rounded-lg">
-                                    <h3 class="text-center">%s</h3>
-                                    <h4 class="text-center">%s</h4>
-                                    <p class="text-center">Type: %s</p>
-                                    <p class="text-center"><sup>ISBN-%s<br> %s, %s</sup></p>
-                                    <p><img src="%s" class="img-fluid rounded-lg"></p>
-                                    <div class="alert alert-secondary" role="alert">
-                                        <h4>Description</h4>
-                                        <p>%s</p>
-                                    </div>
-                                    <p class="text-center">
-                                        <a class="btn btn-primary m-2" href="update.php?id=%s">Edit media</a>
-                                        <a class="btn btn-danger m-2"  href="delete.php?id=%s">Delete media</a>
-                                    </p>
-                                </div>
-                            </div>',
-                            $row['title'], $row['author'], $row['media_type'], $row['isbn_code'], $row['publisher'], $row['publish_date'], $row['image'], $row['short_description'], $row['media_id'], $row['media_id']);
+                        <div class="card mb-3">
+                        <div class="row no-gutters">
+                          <div class="col-md-3">
+                            <img src="%s" class="card-img" alt="%s">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body">
+                                <h4 class="card-title">%s</h4>
+                                <h5 class="card-title">by %s %s</h5>
+                                <p class="card-text"><sup><strong>%s</strong>, published %s, ISBN-%s, %s (%s)</sup></p>
+                                <p class="card-text">%s</p>
+                                <p class="card-text">
+                                    <a class="btn btn-primary btn-sm m-2" href="update.php?id=%s">Edit media</a>
+                                    <a class="btn btn-danger btn-sm m-2"  href="delete.php?id=%s">Delete media</a>
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>',
+                      $row['image'], $row['title'], $row['title'], $row['author_first_name'], $row['author_last_name'], $row['media_type'], $row['publish_date'], $row['isbn_code'], $row['publisher_name'], $row['publisher_address'], $row['short_description'], $row['media_id'], $row['media_id']);
                     }
                 } else {
                     echo('<div class="alert alert-danger text-center" role="alert"><h3>No meals in database</h3></div>');

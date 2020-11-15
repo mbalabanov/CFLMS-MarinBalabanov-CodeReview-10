@@ -31,7 +31,7 @@
                     require_once 'db_connect.php';
                     if ($_POST) {
                         $id = $_POST['id'];
-                        $sql = "DELETE FROM meals WHERE meal_id = {$id}";
+                        $sql = "DELETE FROM media WHERE media_id = {$id}";
                             if($connect->query($sql) === TRUE) {
                             echo "<h3>Successfully deleted!!</h3><a class='btn btn-primary' href='../index.php'>Back to home</a>";
                         } else {

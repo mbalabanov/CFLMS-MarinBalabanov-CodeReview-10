@@ -30,17 +30,23 @@
                     require_once 'db_connect.php';
 
                     if ($_POST) {
-                    $name = $_POST['formname'];
+                    $title = $_POST['formtitle'];
                     $image = $_POST['formimage'];
-                    $ingredients = $_POST[ 'formingredients'];
-                    $allergens = $_POST[ 'formallergens'];
-                    $price = intval($_POST[ 'formprice']);
+                    $author_first_name = $_POST[ 'formauthor_first_name'];
+                    $author_last_name = $_POST[ 'formauthor_last_name'];
+                    $isbn_code = $_POST[ 'formisbn_code'];
+                    $short_description = $_POST[ 'formshort_description'];
+                    $publish_date = intval($_POST[ 'formpublish_date']);
+                    $publisher_name = $_POST[ 'formpublisher'];
+                    $publisher_address = $_POST[ 'formpublisher'];
+                    $publisher_size = $_POST[ 'formpublisher'];
+                    $media_type = $_POST[ 'formmedia_type'];
 
-                    $sql = "INSERT INTO meals (name, image, price, ingredients, allergens) VALUES ('$name', '$image', '$price', '$ingredients', '$allergens')";
+                    $sql = "INSERT INTO media (title, image, author, isbn_code, short_description, publish_date, publisher, media_type) VALUES ('$title', '$image', '$author', '$isbn_code', '$short_description', '$publish_date', '$publisher', '$media_type')";
                         if($connect->query($sql) === TRUE) {
                         echo "
-                            <h3>New meal '$name' successfully added to database</h3>
-                            <a class='btn btn-primary m-2' href='../create.php'>New meal</a><a class='btn btn-secondary m-2' href='../index.php'>Back to home</a>
+                            <h3>New media '$title' successfully added to database</h3>
+                            <a class='btn btn-primary m-2' href='../create.php'>Add new media</a><a class='btn btn-secondary m-2' href='../index.php'>Back to home</a>
                             ";
                     } else  {
                         echo "
