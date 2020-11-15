@@ -17,4 +17,4 @@ The columns of the main table __Media__ ( * ) are:
 - type (book, CD, DVD). Additionally
 - status (“available” or “reserved”; required for Bonus Points).
 
-![Big Library Screenshot](concept/big-library-screenshot.png)
+![Big Library Screenshot](assets/big-library-screenshot.png)
