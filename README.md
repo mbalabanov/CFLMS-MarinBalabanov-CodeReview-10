@@ -1,8 +1,9 @@
 # CFLMS MarinBalabanov CodeReview 10
 
-This is the __Big Library web application.__ The customer wants you to create a big list of all media available in the library (books, CDs, DVDs) and make it available over the web. T
+This is the __Big Library web application__, a big list of all media available in the library (books, CDs, DVDs) available over the web.
 
-The columns of the main table __Media__ ( * ) in the database are:
+The database is called _cflms-marinbalabanov-codereview-10_. Please import the database in the folder _db_export_.
+The columns of the main table __Media__ ( * ) are:
 - title
 - image (HTTP link to an image)
 - first_name
@@ -15,3 +16,5 @@ The columns of the main table __Media__ ( * ) in the database are:
 - publisher_size
 - type (book, CD, DVD). Additionally
 - status (“available” or “reserved”; required for Bonus Points).
+
+![Big Library Screenshot](concept/big-library-screenshot.png)
