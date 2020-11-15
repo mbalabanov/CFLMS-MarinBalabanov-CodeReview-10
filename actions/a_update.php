@@ -45,7 +45,7 @@
 
                             $media_id = $_POST['formmedia_id'];
 
-                            $sql = "UPDATE media SET title = '$title', image = '$image', author = '$author', isbn_code = '$isbn_code', short_description = '$short_description', publish_date = '$publish_date', publisher = '$publisher', media_type = '$media_type' WHERE media_id = {$media_id}" ;
+                            $sql = "UPDATE media SET title = '$title', image = '$image', author_first_name = '$author_fist_name', author_last_name = '$author_last_name', isbn_code = '$isbn_code', short_description = '$short_description', publish_date = '$publish_date', publisher_name = '$publisher_name', publisher_address = '$publisher_address', publisher_size = '$publisher_size', media_type = '$media_type' WHERE media_id = {$media_id}" ;
                             if($connect->query($sql) === TRUE) {
                                 echo "<h3>Media '$title' was successfully updated</h3><a class='btn btn-primary m-2' href='../update.php?id=" .$media_id."'>Edit media</a><a class='btn btn-secondary m-2' href='../index.php'>Back to home</a>";
                             } else {

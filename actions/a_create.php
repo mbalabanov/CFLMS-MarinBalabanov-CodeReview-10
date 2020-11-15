@@ -42,7 +42,7 @@
                     $publisher_size = $_POST[ 'formpublisher'];
                     $media_type = $_POST[ 'formmedia_type'];
 
-                    $sql = "INSERT INTO media (title, image, author, isbn_code, short_description, publish_date, publisher, media_type) VALUES ('$title', '$image', '$author', '$isbn_code', '$short_description', '$publish_date', '$publisher', '$media_type')";
+                    $sql = "INSERT INTO media (title, image, author_first_name, author_last_name, isbn_code, short_description, publish_date, publisher_name, publisher_address, publisher_size, media_type) VALUES ('$title', '$image', '$author_first_name', '$author_last_name', '$isbn_code', '$short_description', '$publish_date', '$publisher_name', '$publisher_address', '$publisher_size', '$media_type')";
                         if($connect->query($sql) === TRUE) {
                         echo "
                             <h3>New media '$title' successfully added to database</h3>
