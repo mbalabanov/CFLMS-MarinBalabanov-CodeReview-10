@@ -58,7 +58,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">%s</h4>
                                 <h5 class="card-title">by %s %s</h5>
-                                <p class="card-text"><sup><strong>%s</strong>, published %s, ISBN-%s, %s (%s)</sup></p>
+                                <p class="card-text"><sup><strong>%s</strong>, published %s. ISBN-%s. %s (%s)</sup></p>
                                 <p class="card-text">%s</p>
                                 <p class="card-text">
                                     <a class="btn btn-primary btn-sm m-2" href="update.php?id=%s">Edit media</a>
