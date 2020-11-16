@@ -39,7 +39,7 @@
         // if there's no error, continue to login
         if (!$error) {
             $password = hash( 'sha256', $pass); // password hashing
-            $res=mysqli_query($connect, "SELECT userId, userName, userPass FROM users WHERE userEmail='$email'" );
+            $res=mysqli_query($connect, "SELECT * FROM users WHERE userEmail='$email'" );
             $row=mysqli_fetch_array($res, MYSQLI_ASSOC);
             $count = mysqli_num_rows($res); // if uname/pass is correct it returns must be 1 row
 

@@ -47,8 +47,8 @@
             <form action="actions/a_update.php" method="post">
 
                 <div class="row my-2">
-                    <div class="col-md-4 text-right"><label for="formmedia_id">Media ID</label></div >
-                    <div class="col-md-8"><input class="form-control" type="text" name="formmedia_id"  value="<?php echo $data['media_id'] ?>" /></div>
+                    <div class="col-md-4 text-right"><label for="formmedia_id">Media ID<br><sup>(read only)</sup></label></div >
+                    <div class="col-md-8"><input class="form-control" type="text" name="formmedia_id"  value="<?php echo $data['media_id'] ?>" readonly /></div>
                 </div>
                 <div class="row my-2">
                     <div class="col-md-4 text-right"><label for="formimage">Media Title</label></div >
