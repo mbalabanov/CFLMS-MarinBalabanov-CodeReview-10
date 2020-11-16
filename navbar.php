@@ -11,13 +11,13 @@
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <?php
-                if ( isset($_SESSION['user' ]) =="" ) {
+                if ( isset($_SESSION['user' ]) =="" && isset($_SESSION['admin' ]) =="" ) {
                     echo('<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>');
                 }
             ?>
         </ul>
         <?php
-            if (isset($_SESSION['user'])) {
+            if (isset($_SESSION['user']) || isset($_SESSION['admin'])) {
                 echo('<img src="'. $userRow['userImage' ] .'" height="40px" alt="'. $userRow['userEmail' ] .'" class="mx-3">');
                 echo('<span class="text-white">'. $userRow['userEmail' ] .'</span>');
                 echo('<a class="btn btn-light btn-sm mx-4" href="logout.php?logout">Logout</a>');
