@@ -58,6 +58,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">%s</h4>
                                 <h5 class="card-title">by %s %s</h5>
+                                <span class="badge badge-pill badge-success mb-3">%s</span>
                                 <p class="card-text"><sup><strong>%s</strong>, published %s. ISBN-%s. %s (%s)</sup></p>
                                 <p class="card-text">%s</p>
                                 <p class="card-text">
@@ -68,7 +69,7 @@
                           </div>
                         </div>
                       </div>',
-                      $row['image'], $row['title'], $row['title'], $row['author_first_name'], $row['author_last_name'], $row['media_type'], $row['publish_date'], $row['isbn_code'], $row['publisher_name'], $row['publisher_address'], $row['short_description'], $row['media_id'], $row['media_id']);
+                      $row['image'], $row['title'], $row['title'], $row['author_first_name'], $row['author_last_name'], $row['status'], $row['media_type'], $row['publish_date'], $row['isbn_code'], $row['publisher_name'], $row['publisher_address'], $row['short_description'], $row['media_id'], $row['media_id']);
                     }
                 } else {
                     echo('<div class="alert alert-danger text-center" role="alert"><h3>No meals in database</h3></div>');
