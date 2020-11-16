@@ -47,20 +47,26 @@
             if($result->num_rows > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
                     printf('
-                    <div class="card col-md-6 my-1 p-4">
-                        <div class="row no-gutters">
-                            <div class="col-md-2">
-                                <img src="%s" class="card-img" alt="%s">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <h4 class="card-title">%s<br>%s</h4>
-                                    <span class="badge badge-pill badge-success mx-2">%s</span>
+                    <div class="col-md-6">
+                        <div class="card m-2 p-4">
+                            <div class="row no-gutters">
+                                <div class="col-md-2">
+                                    <img src="%s" class="card-img" alt="%s">
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="card-body">
+                                        <h4 class="card-title">%s<br>%s</h4>
+                                        <span class="badge badge-pill badge-success mx-2">%s</span>
+                                        <p class="card-text">
+                                            <a class="btn btn-primary btn-sm m-2" href="adminupdate.php?id=%s">Edit user</a>
+                                            <a class="btn btn-danger btn-sm m-2"  href="admindelete.php?id=%s">Delete user</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>',
-                    $row['userImage'], $row['userName'], $row['userName'], $row['userEmail'], $row['userType']);
+                    $row['userImage'], $row['userName'], $row['userName'], $row['userEmail'], $row['userType'], $row['userId'], $row['userId']);
                 }
             } else {
                 echo('<div class="alert alert-danger text-center" role="alert"><h3>No users in database</h3></div>');

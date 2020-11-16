@@ -84,7 +84,9 @@
         <div class="row my-3">
             <div class="col-12 text-center">
                 <h2>Welcome to the Big Media Library</h2>
-                <h4>Please register and login to proceed.<br>For test purposes please use username <strong>test1@test.com</strong> and password <strong>tatata</strong></h4>
+                <h4>Please register and login as a user to proceed.</h4>
+                <p>For a <span class="badge badge-pill badge-info">standard user</span> please use username <strong>test1@test.com</strong> and password <strong>tatata</strong><br />
+                For a <span class="badge badge-pill badge-warning">admin user</span> please use username <strong>admin@admin.com</strong> and password <strong>tatata</strong></p>
             </div>
         </div>
             <div class="col-6 offset-3 mb-5 alert alert-primary pb-4 rounded-lg">
