@@ -99,7 +99,7 @@
                     <?php } ?>
                     <div class="row my-2">
                         <div class="col-4 text-right">
-                            Email Address
+                            <label for="email">Email Address</label>
                         </div>
                         <div class="col-8">
                             <input type="email" name="email" class="form-control" placeholder="Your email address" value="<?php echo $email; ?>"  maxlength="40" />
@@ -108,7 +108,7 @@
                     </div>
                     <div class="row my-2">
                         <div class="col-4 text-right">
-                            Password
+                            <label for="pass">Password</label>
                         </div>
                         <div class="col-8">
                             <input type="password" name="pass"  class="form-control" placeholder="Your password" maxlength="15"  />
